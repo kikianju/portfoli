@@ -1,0 +1,689 @@
+/* layout 전체배경*/
+ body{
+ 	background: #f1f4fb url(../img/body_bg.gif);
+ }
+
+ #wrap {}
+ #header {height: 327px; 
+    /* background-image: url('../img/header_bg.jpg');
+       background-repeat: repeat-x; 
+       background-position: center top; 아래와 같이 한줄로 요약*/
+   background: url('../img/header_bg.jpg') repeat-x center top;
+ }
+ #contents{}
+ #footer {height: 200px; background-color: #777;}
+
+/*이미지를 표현하는 방법
+1. html 태를 통해서 표현하는 방법
+2. css 속성을 통해서 표현하는 방법
+3. 이미지 스프라이트 방법(IR효과)
+
+왜? 2가지 방법이 있을까?
+1번 방법:의미가 있는 이미지 (alt 꼭 필요함)
+2번 방법:의미가 없는 이미지 (alt 꼭 필요하진 않음)
+
+
+*/
+
+ /* container 가운데 배경*/
+ .container {
+    width: 990px; 
+    margin: 0 auto;
+    position: relative;
+ }
+
+
+
+/* contents layout (전체배경) */
+#cont-nav {background: url(../img/cont_nav_bg.png) repeat-x;}
+#cont-tit { 
+	background-color: #fff;
+}
+#cont-ban {background-color: #dceff7;}
+#cont-cont {}
+
+
+/* quick */
+.quick {
+   text-align: right;
+}
+.quick a {color: #fff; padding: 5px 0 0 10px; display: inline-block;}
+.quick a:hover {
+   color: blue;
+   transition: 0.7s;
+}
+
+
+
+
+/* title 인라인 구조에서는 display이를 꼭 inline-block으로 해야지만 margin-top이 적용된다. */
+.title {
+   text-align: center;
+
+}
+
+
+.title p {
+   /* background-color: #2698cb;  */
+   font-size: 28px; 
+   display: inline-block; 
+   color: #fff; 
+   margin-top:100px; 
+   padding: 5px 15px;
+   text-transform: uppercase;
+}
+
+.title h1 a {
+   
+   font-size: 18px;
+   color: #fff;
+   text-transform: capitalize; 앞 글자만 대문자
+   padding: 5px 15px;
+   display: inline-block;
+}
+
+.title a:hover{
+   color: #fff;
+   -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -o-transform: scale(1.5,1.5);
+    -ms-transform: scale(1.5,1.5);
+    transform: scale(1.5,1.5);
+    transition: 0.3s;
+}
+
+/* icon */
+.icon {
+   position: absolute; 
+   left: 370px;
+   top:250px;
+}
+
+.icon li {
+   overflow: hidden;
+   float: left;
+}
+
+.icon li a{
+   width: 60px;
+   height: 60px;
+   display: block;
+   margin: 0 3px;
+   background-image: url(../img/icon.png);
+}
+
+/* onclike버튼을 만들어야함 */
+.icon li.icon-tit1 a{
+
+
+}
+.icon li.icon-tit2 a{
+   background-position: 0 -60px;
+   
+}
+.icon li.icon-tit3 a{
+   background-position: 0 -120px;
+   
+}
+.icon li.icon-tit4 a{
+   background-position: 0 -180px;
+}
+
+
+.icon li.icon-tit1 a:hover{
+   background-position: -60px 0;
+}
+
+.icon li.icon-tit2 a:hover{
+   background-position: -60px -60px;
+   
+}
+.icon li.icon-tit3 a:hover{
+   background-position: -60px -120px;
+   
+}
+.icon li.icon-tit4 a:hover{
+   background-position: -60px -180px;
+}
+
+/*nav */
+.nav{
+	overflow: hidden;
+	padding: 20px 0;
+}
+.nav div{
+	float: left;
+	width: 40%;
+}
+
+.nav h3{
+	font-size: 25px;
+	color: #5bbbeb;
+	
+
+}
+.nav div ul{
+	overflow: hidden;
+}
+
+.nav div ul li{
+	width: 50%;
+	float: left;
+}
+
+.nav div ul li a{
+	color: #333;
+	padding: 3px;
+	font-family: 'Ubuntu', sans-serif;
+
+	
+}
+
+.nav div ul li a:hover{
+	color: #5bbbeb;
+	transition: 0.3s;
+	
+}
+
+.nav div.last{
+	width: 20%;
+}
+
+.nav div.last ul li{
+	width: 100%;
+}
+
+
+.tit h2{
+	text-align: center;
+	font-size: 39px;
+	color: #2c94c4;
+	letter-spacing: 2px;
+	font-family: 'Shadows Into Light', cursive;
+}
+
+
+
+.tit .btn {
+	position: absolute;
+	right: 0;
+	top: 2px;
+	display: block;
+	width: 61px;
+	height: 61px;
+	background: url(../img/icon.png) 0 -600px;
+}
+
+.tit .btn:hover{
+	background-position: -60px -660px;
+}
+
+.ban{
+	padding: 20px 0;
+}
+
+.ban ul {
+	overflow: hidden;
+}
+
+.ban ul li{
+	float: left;
+	width: 330px;
+	text-align: center;
+}
+
+.ban ul li a img{
+	border: 4px solid #dcdcdc;
+}
+
+.ban ul li a:hover img{
+	border-color: #98bddc;
+	
+}
+
+.ban img{
+	display: block;
+
+	
+}
+.ban .ban-prev{
+	position: absolute;
+	left: -80px;
+	top: 60px;
+	width: 43px;
+	height: 43px;
+	background: url(../img/icon.png) -150px 0;
+}
+.ban .ban-next{
+	position: absolute;
+	right: -30px;
+	top: 60px;
+	width: 43px;
+	height: 43px;
+	background: url(../img/icon.png) -150px -43px;
+
+}
+
+.ban .ban-prev:hover{
+	background: url(../img/icon.png) -193px 0;
+}
+
+.ban .ban-next:hover{
+	background: url(../img/icon.png) -193px -43px;
+}
+
+
+/* cont layout */
+.cont {overflow: hidden; padding-top: 30px;}
+.cont .box {
+	position: relative; 
+	width: 289px; 
+	height: 400px; 
+	float: left; 
+	margin: 0 30px 30px 0; 
+	padding-right: 30px;
+}
+
+.cont .box1 {border-right: 1px solid #c8c8c8;}
+.cont .box3 {margin-right: 0; padding-right: 0;}
+.cont .box4 {border-right: 1px solid #c8c8c8;}
+.cont .box5 {border-right: 1px solid #c8c8c8;}
+.cont .box6 {margin-right: 0; padding-right: 0;}
+
+
+.cont .box .ico-img{
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 0;
+	top: 6px;
+	background-image: url(../img/icon.png);
+	cursor: pointer;
+
+}
+
+.cont .co-tit{
+	font-size: 20px;
+	color: #0093bd;
+	margin-left: 65px;
+
+
+}
+
+.cont .box .ico-tit{
+	padding-left: 67px;
+	font-size: 18px;
+	}
+
+.cont .box .ico-desc{
+	padding-left: 67px;
+	color: #878787;
+	border-bottom: 1px solid #d0d0d0;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	
+}
+
+.cont .box1 .ico-img{background-position: 0 -240px; cursor:col-resize; }
+.cont .box2 .ico-img{background-position: 0 -300px; cursor:all-scroll; }
+.cont .box3 .ico-img{background-position: 0 -360px; cursor:cell; }
+.cont .box4 .ico-img{background-position: 0 -420px; cursor:crosshair; }
+.cont .box5 .ico-img{background-position: 0 -480px; cursor:e-resize; }
+.cont .box6 .ico-img{background-position: 0 -540px; cursor:help; }
+
+.cont .box1 .ico-img:hover{background-position: -60px -240px;}
+.cont .box2 .ico-img:hover{background-position: -60px -300px;}
+.cont .box3 .ico-img:hover{background-position: -60px -360px;}
+.cont .box4 .ico-img:hover{background-position: -60px -420px;}
+.cont .box5 .ico-img:hover{background-position: -60px -480px;}
+.cont .box6 .ico-img:hover{background-position: -60px -540px;}
+
+
+
+/* notice */
+.notice{position: relative; overflow: hidden; margin-bottom: 30px;}
+
+.notice h4{
+	font-size: 20px; 
+	color: #0093bd; 
+	font-weight: bold; 
+	margin-bottom: 3px;
+}
+.notice li{
+	background: url(../img/dot.gif) no-repeat 0px 9px;
+	padding-left: 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+
+}
+.notice .more{
+	right: 0px; 
+	top: 0px;	
+	display: block;
+}
+.notice .more span{
+	width: 38px;
+	height: 30px;
+	background: url(../img/icon.png)-130px -85px;;
+	display: block;
+	margin-left: 230px;
+	margin-top: -5px;
+}
+
+
+.notice2{position: relative;}
+.notice2 h4{
+	font-size: 20px; 
+	color: #0093bd; 
+	font-weight: bold; 
+	margin-bottom: 3px;
+}
+
+.notice2 li{overflow: hidden;}
+.notice2 li a{
+	float: left; width: 60%; background-color: #999;
+	background: url(../img/dot.gif) no-repeat 0px 9px;
+	padding-left: 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.notice2 li .time{
+	text-align: right;
+	float: right; width: 30%; 
+
+}
+.notice2 .more{
+	width: 38px;
+	height: 30px;
+	background: url(../img/icon.png)-130px -85px;
+	display: block;
+	margin-left: 230px;
+	margin-top: -125px;
+}
+
+
+
+/* notice3 */
+
+.notice3{position: relative;}
+.notice3 h4{
+	font-size: 20px; 
+	color: #0093bd; 
+	font-weight: bold; 
+	margin-bottom: 3px;
+}
+
+.notice3 strong {color: #5bbbeb;}
+.notice3 ul {}
+.notice3 li {position: relative; height: 60px; padding-left: 60px; padding-top: 8px;
+}
+.notice3 li a{
+	}
+.notice3 li a img{
+	width: 18%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid #390;
+}
+.notice3 li a strong{display: block;}
+.notice3 li a em {
+	display: block; font-size: 14px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.notice3 .more {
+	width: 38px;
+	height: 30px;
+	background: url(../img/icon.png)-130px -85px;;
+	display: block;
+	margin-left: 230px;
+	margin-top: -310px;
+}
+
+/* notice4 */
+.notice4{position: relative; border: 1px solid #ccc; margin-top: 10px;}
+.notice4 h4{
+	font-size: 14px;
+	border-bottom:  1px solid #ccc;
+	padding: 8px 10px;	
+}
+.notice4 h4 em{color: #cf3292;}
+.notice4 ul{padding: 10px;	}
+.notice4 li{overflow: hidden; background: url(../img/dot.gif) no-repeat 0px 9px; padding-left: 8px;	}
+.notice4 li a{
+	float: left; width: 65%;
+	
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.notice4 li .time{float: right; width: 30%; text-align: right;}
+
+
+
+
+
+
+
+
+
+.notice-hover{}
+.notice-hover h4{
+	font-size: 20px; 
+	color: #0093bd; 
+	font-weight: bold; 
+	margin-bottom: 3px;
+}
+.notice-hover ul{overflow: hidden;}
+.notice-hover li{
+	float: left;
+	width: 29.3333%;
+	margin: 5px 5px 5px 5px;
+	
+	
+}
+
+
+.notice-hover li a span{
+	line-height: 40px;
+	position: relative; 
+	display: block;
+	width: 90px; 
+	height: 90px;
+	text-align: center;
+}
+.notice-hover li a span img{
+	
+	width: 90px;
+	height: 90px;
+}
+
+.notice-hover li a span em{
+	visibility: hidden;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.notice-hover li a span:hover em{
+	visibility: visible;
+	background: #000; 
+	opacity: 0.6;
+	
+}
+
+
+.notice-hover li a strong{
+	font-size: 15px;
+	display: block;
+	padding-top: 3px;
+	text-align: center;
+}
+
+
+.notice-hover .more {
+	width: 38px;
+	height: 30px;
+	background: url(../img/icon.png)-130px -85px no-repeat;
+	display: block;
+	margin-left: 230px;
+	margin-top: -150px;
+}
+
+/* 컨텐츠 요소를 안 보이는게 하는 방법
+1. display: none;      <-> display: block;   영역도 사라짐
+2. visibility: hidden; <-> visibility: visible; 눈에 보이진 않지만 영역 있음
+3. opacity: 0; 		   <-> opacity: 1; 영역은 살아있음
+4. ir(width: 0; height: 0;)            
+*/
+
+.notice-hover2 {position: relative; margin-top: 120px;}
+.notice-hover2 ul{overflow: hidden;}
+.notice-hover2 li{
+	float: left;
+	width: 29.3333%;
+	margin: 5px 5px 5px 5px;
+}
+
+
+.notice-hover2 li a span{
+	line-height: 40px;
+	position: relative; 
+	display: block;
+	width: 90px; 
+	height: 90px;
+	text-align: center;
+}
+.notice-hover2 li a span img{
+	
+	width: 90px;
+	height: 90px;
+}
+
+.notice-hover2 li a span em{
+	visibility: hidden;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.notice-hover2 li a span:hover em{
+	visibility: visible;
+	background: #000; 
+	opacity: 0.6;
+	
+}
+
+
+.notice-hover2 li a strong{
+	font-size: 15px;
+	display: block;
+	padding-top: 3px;
+	text-align: center;
+}
+
+
+/* tap_menu */
+.tap_menu{position: relative; border: 1px solid #ccc; height: 125px; padding: 8px;}
+.tap_menu ul{overflow: hidden; border-bottom: 1px solid #ccc;}
+.tap_menu ul li{float: left; border: 1px solid #ccc; margin-right: 4px;
+margin-bottom: -1px;}
+.tap_menu ul li a{display: block; padding: 3px;}
+.tap_menu ul li ul{position: absolute; left: 10px; top: 50px; border: 0;}
+.tap_menu ul li ul li{float: none; border: 0; 
+	background: url(../img/dot.gif) no-repeat 0 12px; padding-left: 8px;}
+.tap_menu ul li ul li a{}
+.tap_menu ul li.active{background-color: #2c94c4;}
+.tap_menu ul li.active a{color: #fff;}
+.tap_menu ul li.active ul li a {color: #333;}
+
+
+
+
+
+/*login */
+#login-wrap{position: relative; border: 1px solid #c8c8c8; height: 160px;}
+#login-header{
+	color: #fff;
+	line-height: 40px;
+	width: 260px; 
+	height: 40px; 
+	background: #5bbbeb;
+	position: absolute; 
+	left: 15px; 
+	top: 10px;
+	text-align: center;
+
+}
+#login-contents{
+	padding-top: 60px;
+	left: 15px;
+	line-height: 60px;
+}
+#login-footer{}
+
+input[type=text], [type=password]{
+	margin-left: 15px;
+	height: 30px;
+	width: 190px;
+	font-size: 18px;
+	text-align: center;
+}
+input[type=submit]{
+	position: absolute;
+	height: 30px;
+	width: 60px;
+	margin-left: 5px;
+	margin-top: -30px;
+}
+
+input[class*="signup"]{
+	position: absolute;
+	height: 30px;
+	width: 60px;
+	margin-left: 5px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
